@@ -1,0 +1,5 @@
+/bazel-bazel-go-hello-world
+/bazel-bin
+/bazel-genfiles
+/bazel-out
+/bazel-testlogs

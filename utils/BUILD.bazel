@@ -1,0 +1,19 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library", "go_test")
+
+go_library(
+    name = "utils",
+    srcs = [
+        "utils.go",
+    ],
+    importpath = "github.com/mikespokefire/bazel-go-hello-world/utils",
+    visibility = ["//visibility:public"],
+)
+
+go_test(
+    name = "utils_tests",
+    srcs = [
+        "utils_test.go",
+    ],
+    importpath = "github.com/mikespokefire/bazel-go-hello-world/utils",
+    library = ":utils",
+)

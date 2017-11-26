@@ -1,0 +1,23 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_binary")
+
+go_binary(
+    name = "hello_world",
+    srcs = [
+        "hello_world.go",
+    ],
+    importpath = "github.com/mikespokefire/bazel-go-hello-world/tools",
+    deps = [
+        "//utils:utils",
+    ],
+)
+
+go_binary(
+    name = "goodbye_world",
+    srcs = [
+        "goodbye_world.go",
+    ],
+    importpath = "github.com/mikespokefire/bazel-go-hello-world/tools",
+    deps = [
+        "//utils:utils",
+    ],
+)
